@@ -4,7 +4,7 @@ from freegames import path
 
 
 contar = 1
-lil_turtle = path('Turtle_walk.gif')
+lil_turtle = path('car.gif')
 tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
