@@ -68,7 +68,7 @@ def draw():
     
     up()
     goto(180,230)
-    if pareja==32: #Se detecta cuando las parjas estan completas
+    if pareja==32: #Se detecta cuando las parejas estan completas
         write("Muy bien, ganaste")
     else:
         write(pareja)
