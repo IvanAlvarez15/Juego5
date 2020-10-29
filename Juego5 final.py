@@ -2,9 +2,9 @@ from random import *
 from turtle import *
 from freegames import path
 
-pareja=0
+pareja=0 #Inicio de los contadores de taps y parejas
 contar = 0
-lil_turtle = path('car.gif')
+lil_turtle = path('car.gif') #Cambio de numeros a letras
 tiles = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E"]* 2
 state = {'mark': None}
 hide = [True] * 64
@@ -45,7 +45,7 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
-        pareja+=1
+        pareja+=1 #Contador de parejas
 
 def draw():
     "Draw image and tiles."
@@ -64,11 +64,11 @@ def draw():
         up()
         goto(x + 25, y+1)
         color('orange')
-        write(tiles[mark], font=('Arial', 30, 'normal'), align="Center")
+        write(tiles[mark], font=('Arial', 30, 'normal'), align="Center") #Centra los caracteres en el cuadro
     
     up()
     goto(180,230)
-    if pareja==32:
+    if pareja==32: #Se detecta cuando las parjas estan completas
         write("Muy bien, ganaste")
     else:
         write(pareja)
@@ -80,7 +80,7 @@ def draw():
 
     up()
     goto(-180,230)
-    write(contar, font=('Arial', 15, 'normal'), align="Center") 
+    write(contar, font=('Arial', 15, 'normal'), align="Center") #Centra el contador de taps
 
     update()
     ontimer(draw, 100)
